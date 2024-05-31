@@ -1,7 +1,7 @@
 import React from 'react'
 
-export function Card(props) {
-    const { userName, btnText = "Visit Me"} = props
+// eslint-disable-next-line react/prop-types
+export function Card({ userName, btnText = "Visit Me"}) {
 
     return (
         <>
