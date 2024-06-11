@@ -8,7 +8,7 @@ import { Home } from './components/Home/Home.jsx'
 import { AboutUs } from './components/AboutUs/AboutUs.jsx'
 import { Contact } from './components/Contact/Contact.jsx'
 import { User } from './components/User/User.jsx'
-import { Github } from './components/Github/Github';
+import Github, { githubDetails } from './components/Github/Github';
 
 /*
 One Way To Manage Routing
@@ -42,7 +42,11 @@ const router = createBrowserRouter(
       <Route path='about-us' element= {<AboutUs />} />
       <Route path='contact' element= {<Contact />} />
       <Route path='user/:id' element= {<User />} />
-      <Route path='github' element= {<Github />} />
+      <Route
+       loader = { githubDetails}
+       path='github'
+       element= {<Github />}
+       />
     </Route>
   )
 )
